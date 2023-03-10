@@ -19,3 +19,5 @@ const Message = ({ user, message }) => {
     </C.Container>
   );
 };
+
+export default Message;

@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 body{
     width: 100vh;
     width: 100vw;
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 `;
 
