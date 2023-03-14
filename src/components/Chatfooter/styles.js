@@ -1,33 +1,36 @@
 import styled from "styled-components";
+import theme from "../../styles/theme";
 
 export const Container = styled.div`
-  height: 62px;
+  height: 6.2rem;
   bottom: 0;
   width: 100%;
-  padding: 10px 20px;
-  background-color: #f0f2f5;
+  padding: 1rem 2rem;
+  background-color: ${theme.footerColor};
   display: flex;
-  box-shadow: 2px 1px 3px 1px #0003;
+  box-shadow: 0.2rem 0.1rem 0.3rem 0.1rem #0003;
+  border-top: 0.1rem ${theme.borderColor} solid;
 
   svg {
-    width: 25px;
-    height: 25px;
-    color: #54656f;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: ${theme.svgColor};
   }
 `;
 
 export const Form = styled.form`
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.5rem;
   width: 100%;
 `;
 
 export const Input = styled.input`
-  padding: 10px;
+  background-color: ${theme.selectChatColor};
+  padding: 1rem;
   outline: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   width: 100%;
-  box-shadow: inset 0 0 1px 1px #0003;
+  box-shadow: inset 0 0 0.1rem 0.1rem #0003;
 `;

@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Button = styled.button`
   outline: none;
-  font-size: 18px;
-  padding: 14px 18px;
+  font-size: 1.8rem;
+  padding: 1.4rem 1.8rem;
   cursor: pointer;
 `;

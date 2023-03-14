@@ -1,4 +1,5 @@
 import React from "react";
+import { auth } from "../../services/firebase";
 import {
   Container,
   NameContent,
@@ -7,9 +8,9 @@ import {
   Avatar,
   Option,
 } from "./styles";
-import { MdPerson, MdMoreVert, MdSearch } from "react-icons/md";
+import { MdPerson, MdOutlineExitToApp } from "react-icons/md";
 
-const ChatHeader = ({ photoURL, name }) => {
+const ChatHeader = ({ photoURL, name, setUserChat }) => {
   return (
     <Container>
       <UserInfo>
@@ -19,8 +20,9 @@ const ChatHeader = ({ photoURL, name }) => {
         </NameContent>
       </UserInfo>
       <Option>
-        <MdSearch />
-        <MdMoreVert />
+        <MdOutlineExitToApp
+          onClick={() => [auth.signOut(), setUserChat(null)]}
+        />
       </Option>
     </Container>
   );

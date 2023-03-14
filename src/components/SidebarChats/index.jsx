@@ -4,6 +4,7 @@ import { auth, db } from "../../services/firebase";
 import * as C from "./styles";
 import { useCollection } from "react-firebase-hooks/firestore";
 import SidebarChatsItem from "../SidebarChatsItem";
+import GlobalChat from "../globalchat";
 
 const SidebarChats = ({ setUserChat, userChat }) => {
   const [user] = useAuthState(auth);
@@ -16,6 +17,7 @@ const SidebarChats = ({ setUserChat, userChat }) => {
 
   return (
     <C.Container>
+      <GlobalChat setUserChat={setUserChat} userChat={userChat} />
       {chatsSnapshot?.docs.map((item, index) => (
         <C.Content key={index}>
           <SidebarChatsItem

@@ -1,31 +1,32 @@
 import styled from "styled-components";
+import theme from "../../styles/theme";
 
 export const Container = styled.div`
-  height: 59px;
-  background-color: #f0f2f5;
-  padding: 10px 16px;
+  height: 6rem;
+  background-color: ${theme.headerColor};
+  padding: 1rem 1.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5px;
-  box-shadow: 0 1px 2px #0003;
+
+  box-shadow: 0 0.1rem 0.2rem #0003;
 `;
 
 export const Avatar = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 3.5rem;
+  height: 3.5rem;
   cursor: pointer;
   border-radius: 50%;
 `;
 
 export const Optins = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 
   svg {
-    width: 24px;
-    height: 24px;
-    color: #54656f;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: ${theme.svgColor};
     cursor: pointer;
   }
 `;

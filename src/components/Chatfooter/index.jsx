@@ -9,15 +9,20 @@ const ChatFooter = ({ chatId }) => {
   const [user] = useAuthState(auth);
   const [message, setMessage] = useState("");
 
+  const globalChatVerify = chatId == "di0CQidODXonTEGhZ7H1";
+
   const handleSendMessage = (e) => {
     e.preventDefault();
 
-    db.collection("chats").doc(chatId).collection("messages").add({
-      message: message,
-      user: user.email,
-      photoURL: user.photoURL,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    db.collection(globalChatVerify ? "globalChat" : "chats")
+      .doc(chatId)
+      .collection("messages")
+      .add({
+        message: message,
+        user: user.email,
+        photoURL: user.photoURL,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      });
 
     setMessage("");
   };

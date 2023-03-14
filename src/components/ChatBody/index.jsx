@@ -5,9 +5,11 @@ import { Container } from "./style";
 import Message from "../Message";
 
 const ChatBot = ({ chatId }) => {
+  const globalChatVerify = chatId == "di0CQidODXonTEGhZ7H1";
+
   const [messagesRes] = useCollection(
     db
-      .collection("chats")
+      .collection(globalChatVerify ? "globalChat" : "chats")
       .doc(chatId)
       .collection("messages")
       .orderBy("timestamp", "asc")

@@ -9,6 +9,8 @@ export const Container = styled.div`
   padding: 1.5rem 2rem;
   cursor: pointer;
 
+  background-color: red;
+
   &:hover {
     transition: 0.2s;
     background-color: ${theme.selectChatColor};
@@ -24,7 +26,7 @@ export const Container = styled.div`
   }
 
   &.active {
-    background-color: ${theme.selectChatColor};
+    background-color: red;
   }
 `;
 

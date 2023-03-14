@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import theme from "../../styles/theme";
 
 export const Container = styled.div`
-  height: 59px;
-  background-color: #f0f2f5;
-  padding: 10px 16px;
+  height: 6rem;
+  background-color: ${theme.headerColor};
+  padding: 1rem 1.6rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 2px #0003;
+  box-shadow: 0 0.1rem 0.2rem #0003;
   z-index: 1;
 `;
 
@@ -16,11 +17,11 @@ export const UserInfo = styled.div`
   align-items: center;
 
   svg {
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     background-color: #ccc;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 1rem;
     min-width: fit-content;
   }
 `;
@@ -30,27 +31,27 @@ export const NameContent = styled.div`
 `;
 
 export const Name = styled.span`
-  font-size: 18px;
+  font-size: 1.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
 export const Avatar = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 1rem;
   min-width: fit-content;
 `;
 
 export const Option = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 
   svg {
-    width: 24px;
-    height: 24px;
-    color: #54656f;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: ${theme.svgColor};
     cursor: pointer;
   }
 `;

@@ -1,18 +1,17 @@
 import React from "react";
 import { Container, Button } from "./styles";
-import {auth, provider } from "../../services/firebase"
+import { auth, provider } from "../../services/firebase";
 
-const Login = () =>{
+const Login = () => {
+  const handleSignIn = async () => {
+    await auth.signInWithPopup(provider).catch(alert);
+  };
 
-    const handleSignIn = () =>{
-        auth.signInWithPopup(provider).catch(alert)
-    }
+  return (
+    <Container>
+      <Button onClick={handleSignIn}>Login com Google</Button>
+    </Container>
+  );
+};
 
-    return(
-        <Container>
-            <Button onClick={handleSignIn} >Login com Google</Button>
-        </Container>
-    )
-}
-
-export default Login
+export default Login;

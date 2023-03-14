@@ -1,17 +1,18 @@
 import styled from "styled-components";
+import theme from "../../styles/theme";
 
 export const Container = styled.div`
   flex: 1;
-  background-color: #efeae2;
+  background-color: ${theme.bodyColor};
   overflow-y: auto;
 
   &::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 10px;
+    width: 0.6rem;
+    border-radius: 1rem;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: rgba(0, 0, 0, 0.2);
   }
 `;
