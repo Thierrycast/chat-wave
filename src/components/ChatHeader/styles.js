@@ -45,9 +45,6 @@ export const Avatar = styled.img`
 `;
 
 export const Option = styled.div`
-  display: flex;
-  gap: 1rem;
-
   svg {
     width: 2.4rem;
     height: 2.4rem;

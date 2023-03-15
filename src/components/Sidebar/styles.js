@@ -6,4 +6,8 @@ export const Container = styled.div`
   max-width: 41.5rem;
   border-right: 0.1rem solid ${theme.borderColor};
   height: 100vh;
+
+  @media only screen and (max-width: 600px) {
+    width: 100vw;
+  }
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import * as C from "./styles";
-import { MdChat, MdMoreVert } from "react-icons/md";
+import { MdChat, MdOutlineExitToApp } from "react-icons/md";
 import * as EmailValidator from "email-validator";
 import { auth, db } from "../../services/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -45,7 +45,9 @@ const SidebarHeader = ({ setUserChat }) => {
       />
       <C.Optins>
         <MdChat onClick={handleCreateChat} />
-        <MdMoreVert />
+        <MdOutlineExitToApp
+          onClick={() => [auth.signOut(), setUserChat(null)]}
+        />
       </C.Optins>
     </C.Container>
   );

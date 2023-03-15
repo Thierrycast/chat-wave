@@ -9,6 +9,8 @@ const ChatFooter = ({ chatId }) => {
   const [user] = useAuthState(auth);
   const [message, setMessage] = useState("");
 
+  console.log(user);
+
   const globalChatVerify = chatId == "di0CQidODXonTEGhZ7H1";
 
   const handleSendMessage = (e) => {
@@ -19,6 +21,7 @@ const ChatFooter = ({ chatId }) => {
       .collection("messages")
       .add({
         message: message,
+        userName: getAbbreviatedName(user.displayName),
         user: user.email,
         photoURL: user.photoURL,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -26,6 +29,13 @@ const ChatFooter = ({ chatId }) => {
 
     setMessage("");
   };
+
+  function getAbbreviatedName(fullName) {
+    const nameArray = fullName.split(" ");
+    const abbreviatedName =
+      nameArray[0] + " " + nameArray[nameArray.length - 1];
+    return abbreviatedName;
+  }
 
   return (
     <C.Container>

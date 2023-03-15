@@ -15,6 +15,10 @@ export const Line = styled.div`
       background-color: ${theme.myMessageColor};
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 0rem;
+
+      p {
+        display: none;
+      }
     }
     justify-content: right;
   }
@@ -28,13 +32,13 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
-  max-width: 80%;
+  padding: 0.8rem;
+  max-width: 60%;
 `;
 
 export const Message = styled.span`
   font-size: 1.4rem;
-  margin: 0.5rem 4rem 0.5rem 0.5rem;
+  margin: 0.5rem 4rem 1rem 0.5rem;
 `;
 
 export const MessageData = styled.span`
@@ -43,4 +47,10 @@ export const MessageData = styled.span`
   text-align: right;
   height: 1.5rem;
   margin: -0.5rem 0.5rem 0;
+`;
+
+export const UserName = styled.p`
+  color: ${theme.myMessageColor};
+  font-size: 1.1rem;
+  font-weight: 700;
 `;

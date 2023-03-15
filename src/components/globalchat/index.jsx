@@ -1,19 +1,22 @@
 import React from "react";
 import * as C from "./styles";
 
-const GlobalChat = ({ setUserChat, active }) => {
+const GlobalChat = ({ setUserChat, userChat }) => {
   const handleNewChat = () => {
-    const userChat = {
+    const newUserChat = {
       chatId: "di0CQidODXonTEGhZ7H1",
       name: "Global Chat",
       photoURL: "",
     };
 
-    setUserChat(userChat);
+    setUserChat(newUserChat);
   };
 
   return (
-    <C.Container onClick={handleNewChat} className={active}>
+    <C.Container
+      onClick={handleNewChat}
+      className={userChat?.chatId === "di0CQidODXonTEGhZ7H1" ? "active" : ""}
+    >
       <C.Name>Global Chat</C.Name>
     </C.Container>
   );

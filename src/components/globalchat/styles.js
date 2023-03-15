@@ -5,41 +5,22 @@ export const Container = styled.div`
   transition: 0.2s;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   padding: 1.5rem 2rem;
   cursor: pointer;
 
-  background-color: red;
+  color: ${theme.headerColor};
 
   &:hover {
     transition: 0.2s;
     background-color: ${theme.selectChatColor};
   }
 
-  svg {
-    width: 3rem;
-    height: 3rem;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-right: 1rem;
-    min-width: fit-content;
-  }
-
   &.active {
-    background-color: red;
+    background-color: ${theme.selectChatColor};
   }
 `;
 
 export const Name = styled.span`
   font-size: 1.8rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-`;
-
-export const Avatar = styled.img`
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  margin-right: 1rem;
-  min-width: fit-content;
 `;

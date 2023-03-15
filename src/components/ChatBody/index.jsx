@@ -28,7 +28,9 @@ const ChatBot = ({ chatId }) => {
     <Container ref={refBody}>
       {messagesRes?.docs.map((message) => (
         <Message
+          globalChatVerify={globalChatVerify}
           key={message.id}
+          userName={message.data().userName}
           user={message.data().user}
           message={{
             message: message.data().message,

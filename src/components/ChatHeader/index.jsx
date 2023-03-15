@@ -8,7 +8,7 @@ import {
   Avatar,
   Option,
 } from "./styles";
-import { MdPerson, MdOutlineExitToApp } from "react-icons/md";
+import { MdPerson, MdKeyboardArrowRight } from "react-icons/md";
 
 const ChatHeader = ({ photoURL, name, setUserChat }) => {
   return (
@@ -20,9 +20,7 @@ const ChatHeader = ({ photoURL, name, setUserChat }) => {
         </NameContent>
       </UserInfo>
       <Option>
-        <MdOutlineExitToApp
-          onClick={() => [auth.signOut(), setUserChat(null)]}
-        />
+        <MdKeyboardArrowRight onClick={() => setUserChat(null)} />
       </Option>
     </Container>
   );

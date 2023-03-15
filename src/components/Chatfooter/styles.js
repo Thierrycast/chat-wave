@@ -33,4 +33,5 @@ export const Input = styled.input`
   border-radius: 0.5rem;
   width: 100%;
   box-shadow: inset 0 0 0.1rem 0.1rem #0003;
+  color: ${theme.textColor};
 `;

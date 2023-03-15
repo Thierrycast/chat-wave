@@ -46,13 +46,20 @@ function App() {
   }, [user]);
 
   if (loading) return <Loading />;
-
   if (!user) return <Login />;
 
   return (
     <Container>
-      <Sidebar setUserChat={setUserChat} userChat={userChat} />
-      <Chat userChat={userChat} setUserChat={setUserChat} />
+      {window.innerWidth > 600 ? (
+        <>
+          <Sidebar setUserChat={setUserChat} userChat={userChat} />
+          <Chat userChat={userChat} setUserChat={setUserChat} />
+        </>
+      ) : userChat ? (
+        <Chat userChat={userChat} setUserChat={setUserChat} />
+      ) : (
+        <Sidebar setUserChat={setUserChat} userChat={userChat} />
+      )}
     </Container>
   );
 }
