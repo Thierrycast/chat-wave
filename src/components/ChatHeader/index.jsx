@@ -10,11 +10,17 @@ import {
 } from "./styles";
 import { MdPerson, MdKeyboardArrowRight } from "react-icons/md";
 
-const ChatHeader = ({ photoURL, name, setUserChat }) => {
+const ChatHeader = ({ photoURL, name, setUserChat, chatId }) => {
+  const globalChatVerify = chatId == "di0CQidODXonTEGhZ7H1";
+
   return (
     <Container>
       <UserInfo>
-        {photoURL ? <Avatar src={photoURL} alt="Avatar" /> : <MdPerson />}
+        {!globalChatVerify && (
+          <>
+            {photoURL ? <Avatar src={photoURL} alt="Avatar" /> : <MdPerson />}
+          </>
+        )}
         <NameContent>
           <Name>{name}</Name>
         </NameContent>

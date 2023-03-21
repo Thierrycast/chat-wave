@@ -18,6 +18,7 @@ const SidebarChats = ({ setUserChat, userChat }) => {
   return (
     <C.Container>
       <GlobalChat setUserChat={setUserChat} userChat={userChat} />
+      <C.Divider />
       {chatsSnapshot?.docs.map((item, index) => (
         <C.Content key={index}>
           <SidebarChatsItem

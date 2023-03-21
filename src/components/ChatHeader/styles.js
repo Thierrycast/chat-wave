@@ -22,7 +22,6 @@ export const UserInfo = styled.div`
     background-color: #ccc;
     border-radius: 50%;
     margin-right: 1rem;
-    min-width: fit-content;
   }
 `;
 
@@ -38,10 +37,8 @@ export const Name = styled.span`
 
 export const Avatar = styled.img`
   width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   margin-right: 1rem;
-  min-width: fit-content;
 `;
 
 export const Option = styled.div`

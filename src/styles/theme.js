@@ -11,4 +11,18 @@ const theme = {
   myMessageColor: "#1c73e6",
 };
 
+// const theme = {
+//   bodyColor: "#fff",
+//   sidebarColor: "#c0d9fa",
+//   selectChatColor: "#8bbcfc",
+//   textColor: "#FFF",
+//   secondTextColor: "#000",
+//   headerColor: "#1c73e6",
+//   footerColor: "#fff",
+//   svgColor: "#a1bee6",
+//   borderColor: "#fff",
+//   messageColor: "#3d90fc",
+//   myMessageColor: "#1c73e6",
+// };
+
 export default theme;
