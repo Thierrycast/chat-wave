@@ -2,6 +2,7 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 
 export const Container = styled.div`
+  width: 100%;
   height: 6rem;
   background-color: ${theme.headerColor};
   padding: 1rem 1.6rem;
@@ -10,6 +11,11 @@ export const Container = styled.div`
   justify-content: space-between;
   box-shadow: 0 0.1rem 0.2rem #0003;
   z-index: 1;
+
+  @media only screen and (max-width: 600px) {
+    position: fixed;
+    top: 0;
+  }
 `;
 
 export const UserInfo = styled.div`

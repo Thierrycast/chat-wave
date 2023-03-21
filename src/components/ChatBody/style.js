@@ -2,6 +2,8 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 
 export const Container = styled.div`
+  margin-top: 6rem;
+
   flex: 1;
   background-color: ${theme.bodyColor};
   overflow-y: auto;

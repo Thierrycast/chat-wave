@@ -16,6 +16,11 @@ export const Container = styled.div`
     height: 2.5rem;
     color: ${theme.svgColor};
   }
+
+  @media only screen and (max-width: 600px) {
+    position: fixed;
+    bottom: 0;
+  }
 `;
 
 export const Form = styled.form`
