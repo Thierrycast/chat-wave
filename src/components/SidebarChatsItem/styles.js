@@ -20,7 +20,6 @@ export const Container = styled.div`
     background-color: #ccc;
     border-radius: 50%;
     margin-right: 1rem;
-    min-width: fit-content;
   }
 
   &.active {
@@ -32,12 +31,11 @@ export const Name = styled.span`
   font-size: 1.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: ${theme.secondTextColor};
 `;
 
 export const Avatar = styled.img`
   width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   margin-right: 1rem;
-  min-width: fit-content;
 `;

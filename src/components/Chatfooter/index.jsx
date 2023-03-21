@@ -16,6 +16,8 @@ const ChatFooter = ({ chatId }) => {
   const handleSendMessage = (e) => {
     e.preventDefault();
 
+    if (!message) return;
+
     db.collection(globalChatVerify ? "globalChat" : "chats")
       .doc(chatId)
       .collection("messages")

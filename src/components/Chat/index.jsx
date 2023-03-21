@@ -17,6 +17,7 @@ const Chat = ({ userChat, setUserChat }) => {
         photoURL={userChat?.photoURL}
         name={userChat?.name}
         setUserChat={setUserChat}
+        chatId={userChat?.chatId}
       />
       <ChatBody chatId={userChat?.chatId} />
       <Chatfooter chatId={userChat?.chatId} />
