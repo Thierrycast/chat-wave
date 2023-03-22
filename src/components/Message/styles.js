@@ -7,6 +7,9 @@ export const Line = styled.div`
   margin: 1rem;
   display: flex;
 
+  align-items: flex-end;
+  gap: 1rem;
+
   div {
   }
 
@@ -21,6 +24,18 @@ export const Line = styled.div`
       }
     }
     justify-content: right;
+    flex-direction: row-reverse;
+  }
+`;
+
+export const Avatar = styled.img`
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+
+  @media only screen and (max-width: 600px) {
+    width: 3rem;
+    height: 3rem;
   }
 `;
 

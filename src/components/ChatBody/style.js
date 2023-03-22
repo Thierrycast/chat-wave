@@ -2,8 +2,6 @@ import styled from "styled-components";
 import theme from "../../styles/theme";
 
 export const Container = styled.div`
-  margin-top: 6rem;
-
   flex: 1;
   background-color: ${theme.bodyColor};
   overflow-y: auto;
@@ -16,5 +14,9 @@ export const Container = styled.div`
   &::-webkit-scrollbar-thumb {
     border-radius: 1rem;
     background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-top: 6rem;
   }
 `;
