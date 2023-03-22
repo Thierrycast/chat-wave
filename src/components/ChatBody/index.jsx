@@ -28,6 +28,7 @@ const ChatBot = ({ chatId }) => {
     <Container ref={refBody}>
       {messagesRes?.docs.map((message) => (
         <Message
+          avatar={message.data().photoURL}
           globalChatVerify={globalChatVerify}
           key={message.id}
           userName={message.data().userName}

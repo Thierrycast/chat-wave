@@ -9,8 +9,6 @@ const ChatFooter = ({ chatId }) => {
   const [user] = useAuthState(auth);
   const [message, setMessage] = useState("");
 
-  console.log(user);
-
   const globalChatVerify = chatId == "di0CQidODXonTEGhZ7H1";
 
   const handleSendMessage = (e) => {
