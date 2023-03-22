@@ -18,5 +18,6 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 600px) {
     margin-top: 6rem;
+    margin-bottom: 6.2rem;
   }
 `;
